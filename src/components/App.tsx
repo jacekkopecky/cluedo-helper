@@ -54,7 +54,7 @@ export default function App(): JSX.Element {
   return (
     <main>
       <header>
-        <h1>Cluedo helper</h1>
+        <h1>Cluedo junior helper</h1>
         <button onClick={reset}>reset</button>
       </header>
 
