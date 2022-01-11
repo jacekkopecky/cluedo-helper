@@ -5,12 +5,12 @@ import Button from './Button';
 import './App.css';
 
 const PLAYERS = [
-  'Col. Mustard',
-  'Miss Scarlett',
+  'Col. Mustard (yellow)',
+  'Miss Scarlett (red)',
   'Mr Green',
-  'Mrs Peacock',
-  'Dr Orchid',
-  'Prof. Plum',
+  'Mrs Peacock (blue)',
+  'Dr Orchid (light purple)',
+  'Prof. Plum (dark violet)',
 ];
 
 const TOY_CHEST = 'Toy Chest';
