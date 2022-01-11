@@ -1,0 +1,44 @@
+{
+  "name": "cluedo-helper",
+  "version": "0.0.1",
+  "description": "helper app for playing cluedo",
+  "scripts": {
+    "start": "PORT=8080 parcel serve src/index.html",
+    "build": "PORT=8080 parcel build src/index.html",
+    "test": "npm run --silent lint",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacekkopecky/cluedo-helper.git"
+  },
+  "author": "Jacek Kopecky <jacek@jacek.cz>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacekkopecky/cluedo-helper/issues"
+  },
+  "homepage": "https://github.com/jacekkopecky/cluedo-helper#readme",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "eslint": "^7.32.0",
+    "eslint-config-portsoc-ts": "^0.8.6",
+    "parcel": "^2.1.1",
+    "typescript": "^4.5.4"
+  },
+  "eslintConfig": {
+    "extends": "portsoc-ts",
+    "root": true,
+    "env": {
+      "browser": true
+    },
+    "ignorePatterns": [
+      "dist",
+      ".parcel-cache"
+    ]
+  }
+}
