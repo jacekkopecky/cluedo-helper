@@ -20,7 +20,7 @@ import toychest from './toychest.jpg';
 import trex from './trex.jpg';
 import xylophone from './xylophone.jpg';
 
-export default {
+const IMAGES: Record<string, string> = {
   ball: ball,
   chair: chair,
   colmustard: colmustard,
@@ -41,3 +41,11 @@ export default {
   trex: trex,
   xylophone: xylophone,
 };
+
+export function getImage(str: string): string | undefined {
+  // strip non-A-Z and lowercase, and remove everything after parentheses
+  // making e.g. 'Col. Mustard (yellow)' into 'colmustard'
+  const simpleName = Array.from(str.toLowerCase().split('(')[0]).filter(c => c >= 'a' && c <= 'z').join('');
+
+  return IMAGES[simpleName];
+}

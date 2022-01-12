@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Button from './Button';
+import { getImage } from '../images';
 
 import './App.css';
 
@@ -58,7 +59,7 @@ export default function App(): JSX.Element {
         <button onClick={reset}>reset</button>
       </header>
 
-      <section>
+      <section className="players">
         {renderButtons(PLAYERS)}
         {Boolean(lastSelectedPlayer) && (
           <div className="overlay">
@@ -89,6 +90,7 @@ export default function App(): JSX.Element {
         text={str}
         isSet={isSet(str)}
         setSet={setItem}
+        image={getImage(str)}
         extraClass={playerHasToy[str] === TOY_CHEST ? 'whodunit' : ''}
         disabled={disabled}
       />
@@ -117,13 +119,14 @@ export default function App(): JSX.Element {
 
     if (!set) {
       if (playerHasToy[text]) {
+        setCrossedItems(items => items.filter((str) => str !== playerHasToy[text]));
         playerHasToy[playerHasToy[text]] = '';
         playerHasToy[text] = '';
       }
 
       if (lastSelectedPlayer === text) setLastSelectedPlayer('');
 
-      setCrossedItems(crossedItems.filter((str) => str !== text));
+      setCrossedItems(items => items.filter((str) => str !== text));
     }
   }
 

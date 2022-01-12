@@ -10,19 +10,36 @@
   background: #ccc;
 }
 
-.Button::before {
+.Button::after {
   content: ' ';
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  inset: 0;
   background-color: #00ff0080;
   transform: translateX(-100%);
 }
 
-.Button.pushed::before {
+.Button.pushed::after {
   transform: translateX(0);
   background-color: #ffff0080;
   transition: transform 1s ease-in, background-color 0.2s 1s;
+}
+
+.Button > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom;
+  z-index: 0;
+  filter: brightness(1.5) opacity(0.3);
+}
+
+.Button > span {
+  position: relative;
+  z-index: 1;
+}
+
+.Button.set > img {
+  filter: brightness(1.5) opacity(0.3) grayscale(1);
 }

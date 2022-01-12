@@ -8,6 +8,7 @@ interface ButtonProps {
   setSet: (text: string, isSet: boolean) => void,
   extraClass?: string,
   disabled?: boolean,
+  image?: string,
 }
 
 // how long to hold the button to switch it, in ms
@@ -26,7 +27,9 @@ export default function Button(props: ButtonProps): JSX.Element {
       onTouchEnd={releaseMouse}
       onContextMenu={(e) => e.preventDefault()}
     >
-      {props.text}</div>
+      {props.image && <img src={props.image} alt={props.text} /> }
+      <span>{props.text}</span>
+    </div>
   );
 
   function pressMouse() {
