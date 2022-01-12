@@ -15,7 +15,7 @@
   position: absolute;
   inset: 0;
   background-color: #00ff0080;
-  transform: translateX(-100%);
+  transform: translateX(-101%);
 }
 
 .Button.pushed::after {
