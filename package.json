@@ -4,7 +4,7 @@
   "description": "helper app for playing cluedo",
   "scripts": {
     "start": "PORT=8080 parcel serve src/index.html",
-    "build": "parcel build --no-cache --public-url /cluedo-helper/ --dist-dir docs src/index.html",
+    "build": "rm -rf docs; parcel build --no-cache --public-url /cluedo-helper/ --dist-dir docs src/index.html",
     "test": "npm run --silent lint",
     "lint": "eslint ."
   },
