@@ -45,6 +45,8 @@ const TIMES = [
   '5:00',
 ];
 
+randomizeAll();
+
 type HasMap = Record<string, string>;
 
 export default function App(): JSX.Element {
@@ -135,8 +137,27 @@ export default function App(): JSX.Element {
   }
 
   function reset() {
+    randomizeAll();
     setCrossedItems([]);
     setLastSelectedPlayer('');
     setPlayerHasToy({});
   }
+}
+
+// randomize an array in place
+function randomize<T>(arr: T[]): void {
+  // for an array with length N,
+  // N-1 times select a random item from the "rest of the array"
+  // and put it at the front (shrinking the "rest of the array")
+  for (let i = 0; i < arr.length - 1; i += 1) {
+    const index = Math.floor(Math.random() * (arr.length - i)) + i;
+    [arr[i], arr[index]] = [arr[index], arr[i]];
+  }
+}
+
+function randomizeAll() {
+  randomize(PLAYERS);
+  randomize(TOYS);
+  randomize(FURNITURE);
+  randomize(TIMES);
 }
