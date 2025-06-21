@@ -19,27 +19,15 @@
   },
   "homepage": "https://github.com/jacekkopecky/cluedo-helper#readme",
   "dependencies": {
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
-    "eslint": "^7.32.0",
-    "eslint-config-portsoc-ts": "portsoc/eslint-config-portsoc-ts",
-    "parcel": "^2.1.1",
-    "typescript": "^4.5.4"
-  },
-  "eslintConfig": {
-    "extends": "portsoc-ts",
-    "root": true,
-    "env": {
-      "browser": true
-    },
-    "ignorePatterns": [
-      "dist",
-      "docs",
-      ".parcel-cache"
-    ]
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "eslint": "^9.29.0",
+    "parcel": "^2.15.4",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.34.1"
   }
 }

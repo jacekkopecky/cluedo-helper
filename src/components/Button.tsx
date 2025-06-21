@@ -15,7 +15,7 @@ interface ButtonProps {
 // this must match the CSS in Button.css
 const PRESS_DURATION = 1000;
 
-export default function Button(props: ButtonProps): JSX.Element {
+export default function Button(props: ButtonProps): React.JSX.Element {
   const [startedPush, setStartedPush] = React.useState<number>();
 
   return (

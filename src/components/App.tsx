@@ -49,7 +49,7 @@ randomizeAll();
 
 type HasMap = Record<string, string>;
 
-export default function App(): JSX.Element {
+export default function App(): React.JSX.Element {
   const [crossedItems, setCrossedItems] = React.useState<string[]>([]);
   const [lastSelectedPlayer, setLastSelectedPlayer] = React.useState('');
   const [playerHasToy, setPlayerHasToy] = React.useState<HasMap>({});
